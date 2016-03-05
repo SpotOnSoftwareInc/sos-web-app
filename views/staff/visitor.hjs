@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="SemiColonWeb" />
+
+    <!-- Stylesheets
+    ============================================= -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="../style.css" type="text/css" />
+    <link rel="stylesheet" href="../css/dark.css" type="text/css" />
+    <link rel="stylesheet" href="../css/font-icons.css" type="text/css" />
+    <link rel="stylesheet" href="../css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="../css/magnific-popup.css" type="text/css" />
+
+    <link rel="stylesheet" href="../css/responsive.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+    <!-- External JavaScripts
+    ============================================= -->
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/plugins.js"></script>
+
+    <!-- Document Title
+    ============================================= -->
+    <title>Check-ins</title>
+
+</head>
+
+<body class="stretched">
+
+<!-- Header
+    ============================================= -->
+<header id="header" class="full-header dark">
+
+    <div id="header-wrap">
+
+        <div class="container clearfix">
+
+            <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+            <!-- Logo
+                ============================================= -->
+            <div id="logo">
+                <a href="#" class="retina-logo" data-dark-logo="../images/logo.png"><img src="../images/logo.png" alt=" Logo"></a>
+            </div><!-- #logo end -->
+
+            <!-- Primary Navigation
+            ============================================= -->
+            <nav id="primary-menu">
+
+                <ul class="one-page-menu">
+                    <li><a href="/logout"><div>Log out</div></a></li>
+                </ul>
+
+            </nav><!-- #primary-menu end -->
+
+        </div>
+
+    </div>
+
+</header><!-- #header end -->
+
+<section id="page-title">
+
+    <div class="container clearfix">
+        <h1>Check-ins</h1>
+        <ol class="breadcrumb">
+            <li>
+                <span> Avg wait time :
+                    <span class="hr" style="display: inline">0</span> hr
+                    <span class="min" style="display: inline">0</span> min
+                    <span class="sec" style="display: inline">0</span> sec
+                </span>
+            </li>
+            <li>
+                <button class="button button-3d button-rounded button-aqua" data-toggle="modal" data-target="#myModal">Upload CSV</button>
+            </li>
+            <div class="searchSpan pull-left">
+                <form class="search-form" id="searchForm">
+                    <input id="search" class="gate form-control search-input" type="text" placeholder="Search...">
+                </form>
+            </div>
+            <li><span id="time_span"></span></li>
+        </ol>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document" style="top: 235px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Upload CSV</h4>
+                </div>
+                <div class="modal-body">
+                    <span>Enter your CSV:</span>
+                    <textarea rows="15" cols="50" style="position: relative;left: 40%;">Upload your CSV here
+                    </textarea>
+                </div>
+                <!--/need a form here to execute csv via post method-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<div class="container clearfix">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Time</th>
+            <th>Assignee</th>
+            <th>Appointment</th>
+            <th>Check In</th>
+        </tr>
+        </thead>
+        <tbody id="all">
+        <tr id="tr-mark">
+            <td class="name" id="mark">Mark Darmadi</td>
+            <td id="mark-status"></td>
+            <td class="asignee">
+                <div class="sort-contacts-bytype-dropdown dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="mark-sort"><span id="mark_dropdown" class="dropdown-label">Dr. Richard Best</span><b class="caret"></b></a>
+                    <ul class="dropdown-menu dropdown-menu-right" id="mark-toggle">
+                        <li><a href="#"><i class="dropdown test"></i>Dr. Test test</a></li>
+                        <li><a href="#"><i class="dropdown peter"></i>Dr. Peter Parker</a></li>
+                        <li><a href="#"><i class="dropdown richard"></i>Dr. Richard Best</a></li>
+                    </ul>
+                </div>
+            </td>
+            <td>5:12 PM</td>
+            <td id="button-row-mark"><button class="button button-3d button-mini button-rounded button-green" id="mark-button">Checkin</button></td>
+        </tr>
+        <tr id="tr-sean">
+            <td class="name" id="sean">Sean Ippolito</td>
+            <td id="sean-status"></td>
+            <td class="asignee">
+                <div class="sort-contacts-bytype-dropdown dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="sean-sort"><span id="sean_dropdown" class="dropdown-label">Dr. Test tie</span><b class="caret"></b></a>
+                    <ul class="dropdown-menu dropdown-menu-right" id="sean-toggle">
+                        <li><a href="#"><i class="dropdown test"></i>Dr. Test test</a></li>
+                        <li><a href="#"><i class="dropdown peter"></i>Dr. Peter Parker</a></li>
+                        <li><a href="#"><i class="dropdown richard"></i>Dr. Richard Best</a></li>
+                    </ul>
+                </div>
+            </td>
+            <td>None</td>
+            <td id="button-row-sean"><button class="button button-3d button-mini button-rounded button-green" id="sean-button">Checkin</button></td>
+        </tr>
+        <tr id="tr-kurt">
+            <td class="name" id="kurt">Kurt Coban</td>
+            <td id="kurt-status"></td>
+            <td class="asignee">
+                <div class="sort-contacts-bytype-dropdown dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="kurt-sort"><span id="kurt_dropdown" class="dropdown-label">Dr. Peter Parker</span><b class="caret"></b></a>
+                    <ul class="dropdown-menu dropdown-menu-right" id="kurt-toggle">
+                        <li><a href="#"><i class="dropdown test"></i>Dr. Test test</a></li>
+                        <li><a href="#"><i class="dropdown peter"></i>Dr. Peter Parker</a></li>
+                        <li><a href="#"><i class="dropdown richard"></i>Dr. Richard Best</a></li>
+                    </ul>
+                </div>
+
+            </td>
+            <td>4:46 PM</td>
+            <td id="button-row-kurt"><button class="button button-3d button-mini button-rounded button-green"id="kurt-button">Checkin</button></td>
+        </tr>
+        <tr id="tr-sam">
+            <td class="name" id="sam">Sammy Sant</td>
+            <td id="sam-status"></td>
+            <td class="asignee">
+                <div class="sort-contacts-bytype-dropdown dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="sam-sort"><span id="sam_dropdown" class="dropdown-label">Dr. Peter Parker</span><b class="caret"></b></a>
+                    <ul class="dropdown-menu dropdown-menu-right" id="sam-toggle">
+                        <li><a href="#"><i class="dropdown test"></i>Dr. Test test</a></li>
+                        <li><a href="#"><i class="dropdown peter"></i>Dr. Peter Parker</a></li>
+                        <li><a href="#"><i class="dropdown richard"></i>Dr. Richard Best</a></li>
+                    </ul>
+                </div>
+
+            </td>
+            <td>4:21 AM</td>
+            <td id="button-row-sam"><button class="button button-3d button-mini button-rounded button-green"id="sam-button">Checkin</button></td>
+        </tr>
+        <tr id="tr-ashley">
+            <td class="name" id="ashley">Ashley Simpson</td>
+            <td id="ashley-status"></td>
+            <td class="asignee">
+                <div class="sort-contacts-bytype-dropdown dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="ashley-sort"><span id="ashley_dropdown" class="dropdown-label">Dr. Test test</span><b class="caret"></b></a>
+                    <ul class="dropdown-menu dropdown-menu-right" id="ashley-toggle">
+                        <li><a href="#"><i class="dropdown test"></i>Dr. Test test</a></li>
+                        <li><a href="#"><i class="dropdown peter"></i>Dr. Peter Parker</a></li>
+                        <li><a href="#"><i class="dropdown richard"></i>Dr. Richard Best</a></li>
+                    </ul>
+                </div>
+
+            </td>
+            <td>3:23 PM</td>
+            <td id="button-row-ashley"><button class="button button-3d button-mini button-rounded button-green"id="ashley-button">Checkin</button></td>
+        </tr>
+        <tr id="tr-kappa">
+            <td class="name" id="kappa">Kappa Pride</td>
+            <td id="kappa-status"></td>
+            <td class="asignee">
+                <div class="sort-contacts-bytype-dropdown dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="kappa-sort"><span id="kappa_dropdown" class="dropdown-label">Dr. Richard Best</span><b class="caret"></b></a>
+                    <ul class="dropdown-menu dropdown-menu-right" id="kappa-toggle">
+                        <li><a href="#"><i class="dropdown test"></i>Dr. Test test</a></li>
+                        <li><a href="#"><i class="dropdown peter"></i>Dr. Peter Parker</a></li>
+                        <li><a href="#"><i class="dropdown richard"></i>Dr. Richard Best</a></li>
+                    </ul>
+                </div>
+
+            </td>
+            <td>None</td>
+            <td id="button-row-kappa"><button class="button button-3d button-mini button-rounded button-green"id="kappa-button">Checkin</button></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+<!-- Footer Scripts
+============================================= -->
+<script type="text/javascript" src="../js/visitor.js"></script>
+
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
+	<!-- Document Title
+	============================================= -->
+	<title>Side Panel - Left Overlay | Canvas</title>
+    <script type="text/javascript">
+        !function(a,b){a("Keen","https://d26b395fwzu5fz.cloudfront.net/3.4.0/keen.min.js",b)}(function(a,b,c){var d,e,f;c["_"+a]={},c[a]=function(b){c["_"+a].clients=c["_"+a].clients||{},c["_"+a].clients[b.projectId]=this,this._config=b},c[a].ready=function(b){c["_"+a].ready=c["_"+a].ready||[],c["_"+a].ready.push(b)},d=["addEvent","setGlobalProperties","trackExternalLink","on"];for(var g=0;g<d.length;g++){var h=d[g],i=function(a){return function(){return this["_"+a]=this["_"+a]||[],this["_"+a].push(arguments),this}};c[a].prototype[h]=i(h)}e=document.createElement("script"),e.async=!0,e.src=b,f=document.getElementsByTagName("script")[0],f.parentNode.insertBefore(e,f)},this);
+    </script>
+</head>
+
+<body class="stretched side-panel-left side-push-panel">
+
+	<div class="body-overlay"></div>
+
+	<div id="side-panel" class="dark">
+
+		<div id="side-panel-trigger-close" class="side-panel-trigger"><a href="#"><i class="icon-line-cross"></i></a></div>
+
+		<div class="side-panel-wrap">
+
+			<div class="widget clearfix">
+
+				<h4>Dashboard</h4>
+
+				<nav class="nav-tree nobottommargin">
+					<ul>
+						<!-- TODO: make the hrefs actually link to the respective page -->
+						<li><a href="#"><i class="icon-bolt2"></i>Analytics</a>
+						</li>
+						<li><a href="#"><i class="icon-briefcase"></i>Settings</a>
+<!-- 							<ul>
+								<li><a href="#">Grid</a>
+									<ul>
+										<li><a href="#">3 Columns</a></li>
+										<li><a href="#">4 Columns</a></li>
+										<li><a href="#">5 Columns</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Masonry</a></li>
+								<li><a href="#">Loading Styles</a></li>
+								<li><a href="#">Single</a></li>
+							</ul> -->
+						</li>
+						<li><a href="#"><i class="icon-file-text"></i>Business Owner Management</a></li>
+						<li><a href="#"><i class="icon-file-text"></i>About</a>
+							<ul>
+								<li><a href="#">Company</a></li>
+								<li><a href="#">Team</a></li>
+								<li><a href="#">Services</a></li>
+								<li><a href="#">FAQs</a></li>
+							</ul>
+						</li>
+						<!-- <li><a href="#"><i class="icon-map-marker"></i>Contact</a></li> -->
+					</ul>
+				</nav>
+
+			</div>
+
+			<div class="widget quick-contact-widget clearfix">
+
+				<h4>Contact</h4>
+				<div id="quick-contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
+				<form id="quick-contact-form" name="quick-contact-form" action="include/quickcontact.php" method="post" class="quick-contact-form nobottommargin">
+					<div class="form-process"></div>
+					<input type="text" class="required sm-form-control input-block-level" id="quick-contact-form-name" name="quick-contact-form-name" value="" placeholder="Full Name" />
+					<input type="text" class="required sm-form-control email input-block-level" id="quick-contact-form-email" name="quick-contact-form-email" value="" placeholder="Email Address" />
+					<textarea class="required sm-form-control input-block-level short-textarea" id="quick-contact-form-message" name="quick-contact-form-message" rows="4" cols="30" placeholder="Message"></textarea>
+					<input type="text" class="hidden" id="quick-contact-form-botcheck" name="quick-contact-form-botcheck" value="" />
+					<button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="button button-small button-3d nomargin" value="submit">Send Email</button>
+				</form>
+
+				<script type="text/javascript">
+
+					jQuery("#quick-contact-form").validate({
+						submitHandler: function(form) {
+							jQuery(form).find('.form-process').fadeIn();
+							jQuery(form).ajaxSubmit({
+								target: '#quick-contact-form-result',
+								success: function() {
+									jQuery(form).find('.form-process').fadeOut();
+									jQuery(form).find('.sm-form-control').val('');
+									jQuery('#quick-contact-form-result').attr('data-notify-msg', jQuery('#quick-contact-form-result').html()).html('');
+									SEMICOLON.widget.notifications(jQuery('#quick-contact-form-result'));
+								}
+							});
+						}
+					});
+
+				</script>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="full-header" data-sticky-class="not-dark">
+
+			<div id="header-wrap">
+
+				<div class="container clearfix">
+
+					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+					<!-- Logo
+					============================================= -->
+					<div id="logo">
+						<a href="#" class="standard-logo side-panel-trigger" data-dark-logo="images/logo-dark.png"><img src="images/logo-orion.jpg" alt="Canvas Logo" style="background: fill;"></a>
+						<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
+					</div><!-- #logo end -->
+
+					<!-- Primary Navigation
+					============================================= -->
+					<nav id="primary-menu" class="dark">
+
+						<ul>
+							<li><a class="side-panel-trigger" href="#"><div>Dashboard</div></a>
+							</li>
+							<li class=""><a href="#"><div>Employees</div></a>
+							</li>
+							<li class="mega-menu"><a href="#"><div>Portfolio</div></a>
+							</li>
+							<li class="current"><a href="#"><div>Currently on this page</div></a>
+							</li>
+							<!-- <li><a href="shop.html"><div>Shop</div></a>
+							</li>
+							<li class="mega-menu"><a href="#"><div>Shortcodes</div></a>
+							</li> -->
+						</ul>
+
+					</nav><!-- #primary-menu end -->
+
+				</div>
+
+			</div>
+
+		</header><!-- #header end -->
+
+		<!-- Page Title
+		============================================= -->
+		<section id="page-title">
+
+			<div class="container clearfix">
+
+				<h1 style="float: left;">Spot On Software</h1>
+				<span>&nbsp; &nbsp; &nbsp;Admin // Business Owner</span>
+                <!-- TODO: put a dashboard open button? -->
+				<!-- <h2 class="button button-rounded side-panel-trigger rightmargin">&nbsp;</h2> -->
+			</div>
+
+		</section><!-- #page-title end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div class="content-wrap">
+
+				<div class="container clearfix">
+
+					<div class="center">
+
+
+						<h1>stuff goes here</h1>
+						<br>
+
+
+
+					</div>
+
+					<div class="line"></div>
+
+					<div class="col_full">
+						page is a whole column
+					</div>
+
+					<div class="col_half">
+						<h5>first half column</h5>
+						page is split into two columns // first half
+					</div>
+
+					<div class="col_half col_last">
+						<h5>second half column</h5>
+						page is split into two columns // second half
+					</div>
+
+					<div class="clear"></div>
+
+					<div class="col_two_third">
+						<h5>2/3 Width</h5>
+						Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper.
+					</div>
+
+					<div class="col_one_third col_last">
+						<h5>1/3 Width (Last)</h5>
+						Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus.
+					</div>
+
+					<div class="clear"></div>
+
+					<div class="col_one_fourth nobottommargin">
+						<h5>1/4 Width</h5>
+						Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante.
+					</div>
+
+					<div class="col_three_fourth nobottommargin col_last">
+						<h5>3/4 Width (Last)</h5>
+						Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper.
+					</div>
+
+					<div class="clear"></div>
+
+				</div>
+
+			</div>
+
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark">
+
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script type="text/javascript" src="js/functions.js"></script>
+
+</body>
+</html>

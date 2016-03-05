@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="SemiColonWeb" />
+
+    <!-- Stylesheets
+    ============================================= -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="../style.css" type="text/css" />
+    <link rel="stylesheet" href="../css/dark.css" type="text/css" />
+    <link rel="stylesheet" href="../css/font-icons.css" type="text/css" />
+    <link rel="stylesheet" href="../css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="../css/magnific-popup.css" type="text/css" />
+
+    <link rel="stylesheet" href="../css/responsive.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+    <!-- External JavaScripts
+    ============================================= -->
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/plugins.js"></script>
+    <!-- cloudinary library -->
+    <script src='../js/cloudinary/js/jquery.ui.widget.js' type='text/javascript'></script>
+    <script src='../js/cloudinary/js/jquery.iframe-transport.js' type='text/javascript'></script>
+    <script src='../js/cloudinary/js/jquery.fileupload.js' type='text/javascript'></script>
+    <script src='../js/cloudinary/js/jquery.cloudinary.js' type='text/javascript'></script>
+    <title>Admin - Home</title>
+    <style>
+        .button {
+            padding: 12px 20px 45px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+
+        .button {
+            background-color: #c0c0c0;
+            color: black;
+            border: 2px solid #555555;
+        }
+
+        .button:hover {
+            background-color: #555555;
+            color: white;
+        }
+    </style>
+    <script type="text/javascript">
+        !function(a,b){a("Keen","https://d26b395fwzu5fz.cloudfront.net/3.4.0/keen.min.js",b)}(function(a,b,c){var d,e,f;c["_"+a]={},c[a]=function(b){c["_"+a].clients=c["_"+a].clients||{},c["_"+a].clients[b.projectId]=this,this._config=b},c[a].ready=function(b){c["_"+a].ready=c["_"+a].ready||[],c["_"+a].ready.push(b)},d=["addEvent","setGlobalProperties","trackExternalLink","on"];for(var g=0;g<d.length;g++){var h=d[g],i=function(a){return function(){return this["_"+a]=this["_"+a]||[],this["_"+a].push(arguments),this}};c[a].prototype[h]=i(h)}e=document.createElement("script"),e.async=!0,e.src=b,f=document.getElementsByTagName("script")[0],f.parentNode.insertBefore(e,f)},this);
+    </script>
+    <title>Check-in!!</title>
+</head>
+
+<body background="../images/landing/sloth3.jpg">
+
+
+
+<div style="height: 200px; width: 500px;  position:absolute; top:246px; left:535px;">
+
+    <p>  <input type="text" style=" font-size:25px"  name="LastName" size="16"/>  </p>
+</div>
+
+
+<div style=" height: 200px; width: 500px;  position:absolute; top:330px; left:535px;">
+
+    <p>  <input type="text" style=" font-size:25px"  name="Cellphone" size="16"/>  </p>
+</div>
+
+
+<div style="height: 50px; width: 130px;  position:absolute; top:420px; left:540px;">
+    <input type="button" class="button" data-toggle="modal" data-target=".bs-example-modal-lg"value="Check in">
+
+    <!-- Large modal -->
+    <!--<button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>-->
+
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-body">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Checked in!</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Thank you checking in!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $('[data-toggle=popover]').popover();
+    </script>
+</div>
+
+<!-- Footer Scripts
+	============================================= -->
+<script type="text/javascript" src="../js/functions.js"></script>
+<script src="../js/testing.js" type="text/javascript"></script>
+
+
+
+</body>
+</html>
+
+
+
+

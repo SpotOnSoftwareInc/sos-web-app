@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="SemiColonWeb" />
+
+    <!-- Stylesheets
+    ============================================= -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="css/dark.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+    <link rel="stylesheet" href="css/responsive.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+    <!-- External JavaScripts
+    ============================================= -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
+
+    <!-- Document Title
+    ============================================= -->
+    <title>Login/Register</title>
+    <script type="text/javascript">
+        !function(a,b){a("Keen","https://d26b395fwzu5fz.cloudfront.net/3.4.0/keen.min.js",b)}(function(a,b,c){var d,e,f;c["_"+a]={},c[a]=function(b){c["_"+a].clients=c["_"+a].clients||{},c["_"+a].clients[b.projectId]=this,this._config=b},c[a].ready=function(b){c["_"+a].ready=c["_"+a].ready||[],c["_"+a].ready.push(b)},d=["addEvent","setGlobalProperties","trackExternalLink","on"];for(var g=0;g<d.length;g++){var h=d[g],i=function(a){return function(){return this["_"+a]=this["_"+a]||[],this["_"+a].push(arguments),this}};c[a].prototype[h]=i(h)}e=document.createElement("script"),e.async=!0,e.src=b,f=document.getElementsByTagName("script")[0],f.parentNode.insertBefore(e,f)},this);
+    </script>
+</head>
+
+<body class="stretched">
+
+<!-- Document Wrapper
+============================================= -->
+<div id="wrapper" class="clearfix">
+
+    <!-- Content
+    ============================================= -->
+    <section id="content" >
+
+        <div class="content-wrap" style="height: 1200px; background-image: url(images/landing/cat9.jpg); background-position: 50% 0%;">
+
+            <div class="container clearfix">
+
+                <div class="tabs divcenter nobottommargin clearfix" id="tab-login-register" style="max-width: 500px;">
+
+                    <ul class="tab-nav tab-nav2 center clearfix">
+                        <li class="inline-block"><a href="#tab-login">Login</a></li>
+                        <li class="inline-block"><a href="#tab-register">Register</a></li>
+                    </ul>
+
+                    <div class="tab-container ">
+
+                        <div class="tab-content clearfix" id="tab-login">
+                            <div class="panel panel-default nobottommargin">
+                                <div class="panel-body" style="padding: 40px; ">
+                                    <form id="login-form" name="login-form" class="nobottommargin" action="login" method="post">
+
+                                        <h3></h3>
+
+                                        <div class="col_full">
+                                            <label for="login-form-email">Email:</label>
+                                            <input type="text" id="login-form-email" name="email" value="{{email}}" class="form-control" placeholder="welcome@email.com" />
+                                        </div>
+
+                                        <div class="col_full">
+                                            <label for="login-form-password">Password:</label>
+                                            <input type="password" id="login-form-password" name="password" value="{{password}}" class="form-control" placeholder="Password" />
+                                        </div>
+
+                                        <div class="col_full nobottommargin">
+                                            <button class="button button-3d button-black nomargin" id="login-form-submit" name="login-form-submit" value="login">Login</button>
+                                            <a href="#" class="fright">Forgot Password?</a>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content clearfix" id="tab-register">
+                            <div class="panel panel-default nobottommargin">
+                                <div class="panel-body" style="padding: 40px;">
+                                    <h3>Register for an Account</h3>
+                                    <div class="nobottommargin">
+                                    <form method="post" action="" enctype="application/x-www-form-urlencoded" id="register-form" name="register-form" class="nobottommargin">
+
+                                        <div class="col_full">
+                                            <label for="register-form-fname">First Name:</label>
+                                            <input type="text" id="register-form-fname" name="fname" value="{{fname}}" class="form-control" placeholder="First name" />
+                                        </div>
+
+                                        <div class="col_full">
+                                            <label for="register-form-lastname">Last Name:</label>
+                                            <input type="text" id="register-form-lastname" name="lname" value="{{lname}}" class="form-control" placeholder="Last name" />
+                                        </div>
+
+                                        <div class="col_full">
+                                            <label for="register-form-companyName">Company Name:</label>
+                                            <input type="text" id="register-form-companyName" name="companyName" value="{{companyName}}" class="form-control" placeholder="Company name" />
+                                        </div>
+
+                                        <div class="col_full">
+                                            <label for="register-form-email">Email:</label>
+                                            <input type="text" id="register-form-email" name="email" value="{{email}}" class="form-control" placeholder="welcome@email.com" />
+                                        </div>
+
+                                        <div class="col_full">
+                                            <label for="register-form-password">Password:</label>
+                                            <input type="password" id="register-form-password" name="password" value="{{password}}" class="form-control" placeholder="Password" />
+                                        </div>
+
+                                        <div class="col_full nobottommargin">
+                                            <!--<a href="/registerprocess">-->
+                                                <input class="button button-3d button-black nomargin" id="register-form-submit" name="submit" type="submit" value="Sign Up"/>
+                                        <!--</a>-->
+                                        </div>
+
+                                    </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section><!-- #content end -->
+
+    <footer id="footer" class="dark">
+
+
+        <!-- Copyrights
+        ============================================= -->
+        <div id="footer-widgets-wrap clearfix copyrights">
+
+            <div class="container clearfix">
+
+                <div class="col_half">
+                    Copyrights &copy; 2016 Spot On SoftwareInc.<br>
+                    <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+                </div>
+
+                <div class="col_half col_last tright">
+                    <div class="fright clearfix">
+                        <a href="#" class="social-icon si-small si-borderless si-facebook">
+                            <i class="icon-facebook"></i>
+                            <i class="icon-facebook"></i>
+                        </a>
+
+                        <a href="#" class="social-icon si-small si-borderless si-twitter">
+                            <i class="icon-twitter"></i>
+                            <i class="icon-twitter"></i>
+                        </a>
+
+                        <a href="#" class="social-icon si-small si-borderless si-gplus">
+                            <i class="icon-gplus"></i>
+                            <i class="icon-gplus"></i>
+                        </a>
+
+                        <a href="#" class="social-icon si-small si-borderless si-pinterest">
+                            <i class="icon-pinterest"></i>
+                            <i class="icon-pinterest"></i>
+                        </a>
+
+                        <a href="#" class="social-icon si-small si-borderless si-vimeo">
+                            <i class="icon-vimeo"></i>
+                            <i class="icon-vimeo"></i>
+                        </a>
+
+                        <a href="#" class="social-icon si-small si-borderless si-github">
+                            <i class="icon-github"></i>
+                            <i class="icon-github"></i>
+                        </a>
+
+                        <a href="#" class="social-icon si-small si-borderless si-yahoo">
+                            <i class="icon-yahoo"></i>
+                            <i class="icon-yahoo"></i>
+                        </a>
+
+                        <a href="#" class="social-icon si-small si-borderless si-linkedin">
+                            <i class="icon-linkedin"></i>
+                            <i class="icon-linkedin"></i>
+                        </a>
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <i class="icon-envelope2"></i> info@ireceptionist.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> 1-619-6541-6369 <span class="middot">&middot;</span> <i class="icon-skype2"></i> iReceptionOnSkype
+                </div>
+
+            </div>
+
+        </div><!-- #copyrights end -->
+
+    </footer><!-- #footer end -->
+
+ </div><!-- #wrapper end -->
+
+<!-- Go To Top
+============================================= -->
+<div id="gotoTop" class="icon-angle-up"></div>
+
+<!-- Footer Scripts
+============================================= -->
+<script type="text/javascript" src="js/functions.js"></script>
+
+</body>
+</html>
